@@ -1,0 +1,28 @@
+body, ul ,li {
+	margin: 0;
+	padding: 0;
+}
+img {
+	display: block;
+	width: 480px;
+	height: 360px;
+}
+.ct {
+	list-style: none;
+	width: 1440px;
+	margin: 0 auto;
+}
+
+.item {
+	float: left;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
