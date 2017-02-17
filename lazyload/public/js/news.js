@@ -1,3 +1,10 @@
+/*
+   问题：
+   		1.防止用户重复点击
+   		2.服务端没数据 不再发送请求
+
+*/
+
 $(function(){
 	var page = 0,
 		$wrapper = $('.wrapper');
@@ -5,7 +12,14 @@ $(function(){
 
 	$(window).on('scroll',checkNews)
 
-
+	function checkNews(){
+		if(isVisible($wrapper) && !$(window).data('isOver')){ //处于可视区域 不再发请求
+			if($(this).data('isLoading')){  //this === window 获取一个状态锁
+				return;
+			}	
+			getNews();
+		}
+	}
 
 	function getNews(){
 		$(window).data('isLoading',true);  //设置一个状态锁，防止在加载的数据回来之前用户多次点击
@@ -56,12 +70,5 @@ $(function(){
 		}
 		return false;
 	}
-	function checkNews(){
-		if(isVisible($wrapper) && !$(window).data('isOver')){ //处于可视区域 不再发请求
-			if($(this).data('isLoading')){  //this === window 获取一个状态锁
-				return;
-			}	
-			getNews();
-		}
-	}
+
 })

@@ -1,0 +1,88 @@
+body, ul, li {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+ul {
+    list-style: none;
+}         
+a {
+    display: block;                          
+    text-decoration: none;
+}
+img {
+    border: none;
+    display: block;
+}
+.clearfix {
+    *zoom:1;
+}
+body {
+    height: 100vh;
+    text-align: center;
+}
+.ct {
+    width: 480px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+body:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.carousel {
+    position: absolute;
+}
+.carousel-item {
+    position: absolute;
+}
+.carousel-play {
+    position: absolute;
+    width: 100%;
+    top: 50%;  
+    margin-top: -15px;
+}
+
+.carousel-p {
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .3);
+}
+.carousel-p:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+.carousel-play-prev {
+    float: left;
+}
+.carousel-play-next {
+    float: right;
+}
+.carousel-bullet {
+    position: absolute;
+    bottom: 0;
+    font-size:0;
+}
+.carousel-bullet-item{
+    display: inline-block;
+   
+}
+
+.carousel-bullet-item img{
+    width: 120px;
+}
+.active{
+    border-top: 4px solid red;
+}
