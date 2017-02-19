@@ -1,26 +1,34 @@
-body, ul, li {
+body,
+ul,
+li {
     padding: 0;
     margin: 0;
     line-height: 1.5;
 }
+
 ul {
     list-style: none;
 }
+
 a {
     display: block;
     text-decoration: none;
 }
+
 img {
     border: none;
     display: block;
 }
+
 .clearfix {
-    *zoom:1;
+    *zoom: 1;
 }
+
 body {
     height: 100vh;
     text-align: center;
 }
+
 .ct {
     width: 480px;
     height: 360px;
@@ -29,28 +37,33 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
+
 body:before {
     content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
-.clearfix:after{
+
+.clearfix:after {
     content: '';
     display: table;
     clear: both;
 }
+
 .carousel {
     width: 3000px;
     position: absolute;
 }
+
 .carousel-item {
     float: left;
 }
+
 .carousel-play {
     position: absolute;
     width: 100%;
-    top: 50%;  
+    top: 50%;
     margin-top: -15px;
 }
 
@@ -62,28 +75,33 @@ body:before {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .3);
 }
+
 .carousel-p:hover {
     background-color: rgba(0, 0, 0, 1);
 }
+
 .carousel-play-prev {
     float: left;
 }
+
 .carousel-play-next {
     float: right;
 }
+
 .carousel-bullet {
     position: absolute;
     bottom: 0;
-    font-size:0;
-}
-.carousel-bullet-item{
-    display: inline-block;
-   
+    font-size: 0;
 }
 
-.carousel-bullet-item img{
+.carousel-bullet-item {
+    display: inline-block;
+}
+
+.carousel-bullet-item img {
     width: 120px;
 }
-.active{
+
+.active {
     border-top: 4px solid red;
 }
